@@ -4,21 +4,12 @@ class Game():
         self.player1 = player1
         self.player2 = player2
 
-def play_game(self, player1, player2):
+def play_game(self, player1_choice, player2_choice):
 
-    if player1 == player2:
-        result = 'Draw!'
-    elif player1 == 'rock' and player2 == 'paper':
-        result = 'player2 wins!'
-    elif player1 == 'rock' and player2 == 'scissors':
-        result = 'player1 wins!'
-    elif player1 == 'paper' and player2 == 'rock':
-        result = 'player1 wins!'
-    elif player == 'paper' and computer == 'scissors':
-        result = 'player2 wins!'
-    elif player == 'scissors' and computer == 'rock':
-        result = 'player2 wins!'
-    elif player == 'scissors' and computer == 'paper':
-        result = 'player1 wins!'
-
-    return result
+    if (player1_choice == "rock" and player2_choice == "scissors") or (player1_choice == "paper" and player2_choice == "rock") or (player1_choice == "scissors" and player2_choice == "paper"):
+        return "Player 1 wins!"
+    elif (player1_choice == "rock" and player2_choice == "paper") or (player1_choice == "paper" and player2_choice == "scissors") or (player1_choice == "scissors" and player2_choice == "rock"):
+        return "Player 2 wins!"
+    elif player1_choice == player2_choice:
+        return "Draw!"
+    
