@@ -1,10 +1,10 @@
 class Game():
 
-    def __init__(self, player, move):
-        self.player = player
-        self.move = [] 
+    def __init__(self, player1, player2):
+        self.player1 = player1
+        self.player2 = player2
 
-def play_game(player1, player2):
+def play_game(self, player1, player2):
 
     if player1 == player2:
         result = 'Draw!'
