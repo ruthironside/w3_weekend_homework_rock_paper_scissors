@@ -11,5 +11,5 @@ class TestPlayer(unittest.TestCase):
     def test_player_has_name(self):
         self.assertEqual("Bill", self.player1.name)
 
-    def test_plauyer_has_choice(self):
+    def test_player_has_choice(self):
         self.assertEqual("scissors", self.player2.choice)
