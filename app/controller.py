@@ -12,20 +12,23 @@ def index():
 def play(player1_choice, player2_choice): 
     return play_game(player1, player2)
 
-@app.route('/play-game', methods=['POST', 'GET'])
+@app.route('/play-game', methods=['POST'])
 def play_game():
-    player1_name = request.form('player1_name')
-    player1_choice = request.form('player1_choice')
+    player1_name = request.form['player1_name']
+    player1_choice = request.form['player1_choice']
     player1 = Player(name=player1_name, choice=player1_choice)
 
-    player2_name = request.form('player2_name')
-    player2_choice = request.form('player2_choice')
+    player2_name = request.form['player2_name']
+    player2_choice = request.form['player2_choice']
     player2 = Player(name=player2_name, choice=player2_choice)
 
     game1 = Game(player1, player2)
     result = game1.play_game(player1_choice, player2_choice)  
 
     return render_template('index.html', result=result)
+    
+    
+    
     # return redirect('/')
 
 

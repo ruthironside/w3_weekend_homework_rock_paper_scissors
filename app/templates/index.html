@@ -4,8 +4,9 @@
         <title>{{title}} - Rock, Paper, Scissors</title>
     </head>
     <body>
+        <header>    <h1>Rock, Paper, Scissors!</h1></header>
 
-    <h1>Rock, Paper, Scissors!</h1>
+
     <br>  
     <br>
     <h2>Player 1</h2>
@@ -40,10 +41,10 @@
 
 
 
-    {% for player in players %}
+    {% for games in game %}
         <div>
             <p>
-                {{play_game}}
+                {{game1.play_game}}
                 
             </p>
         </div>
