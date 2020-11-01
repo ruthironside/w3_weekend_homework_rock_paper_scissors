@@ -8,16 +8,37 @@
     
     <h1>Rock, Paper, Scissors!</h1>
 
-    <form action="/create-event" method="post">
-        <label for="name_of_event">Event name</label>
+    <form action="/play-game" method="post">
+        <label for="name">Player 1 Name</label>
         <input type="text" name="title" id="title">
-        <input type="submit" value="Add event to planner">
+        <input type="submit" value="Submit">
     </form>
 
-    {% for event in events %}
+    <form action="/play-game" method="get">
+        <label for="choice">Choice</label>
+        <input type="text" name="title" id="title">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/play-game" method="post">
+        <label for="name">Player 2 Name</label>
+        <input type="text" name="title" id="title">
+        <input type="submit" value="Submit">
+    </form>
+
+    <form action="/play-game" method="get">
+        <label for="choice">Choice</label>
+        <input type="text" name="title" id="title">
+        <input type="submit" value="Submit">
+    </form>
+
+
+
+
+    {% for player in players %}
         <div>
             <p>
-                {{event.name_of_event}}
+                {{player.name}}
                 
             </p>
         </div>
