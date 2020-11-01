@@ -4,33 +4,38 @@
         <title>{{title}} - Rock, Paper, Scissors</title>
     </head>
     <body>
-        
-    
+
     <h1>Rock, Paper, Scissors!</h1>
-
+    <br>  
+    <br>
+    <h2>Player 1</h2>
+    <br>
     <form action="/play-game" method="post">
-        <label for="name">Player 1 Name</label>
-        <input type="text" name="title" id="title">
+        <label for="player1_name">Name</label>
+        <input type="text" name="player1_name" id="player1_name">
         <input type="submit" value="Submit">
     </form>
-
-    <form action="/play-game" method="get">
-        <label for="choice">Choice</label>
-        <input type="text" name="title" id="title">
-        <input type="submit" value="Submit">
-    </form>
-
+    <br>
+    <select name="player1_choice" id="player1_choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
+    <br>
+    <br>
+    <h2>Player 2</h2>
+    <br>
     <form action="/play-game" method="post">
-        <label for="name">Player 2 Name</label>
-        <input type="text" name="title" id="title">
+        <label for="player2_name">Name</label>
+        <input type="text" name="player2_name" id="player2_name">
         <input type="submit" value="Submit">
     </form>
-
-    <form action="/play-game" method="get">
-        <label for="choice">Choice</label>
-        <input type="text" name="title" id="title">
-        <input type="submit" value="Submit">
-    </form>
+    <br>
+    <select name="player2_choice" id="player2_choice">
+        <option value="rock">Rock</option>
+        <option value="paper">Paper</option>
+        <option value="scissors">Scissors</option>
+    </select>
 
 
 
@@ -38,7 +43,7 @@
     {% for player in players %}
         <div>
             <p>
-                {{player.name}}
+                {{play_game}}
                 
             </p>
         </div>
