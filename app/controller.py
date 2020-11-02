@@ -10,7 +10,10 @@ def index():
 
 @app.route('/<player1_choice>/<player2_choice>') 
 def play(player1_choice, player2_choice): 
-    return play_game(player1, player2)
+    player1 = Player(name='player1', choice=player1_choice)
+    player2 = Player(name='player2', choice=player2_choice)
+    game1 = Game(player1, player2)
+    return game1.play_game(player1_choice, player2_choice) 
 
 @app.route('/play-game', methods=['POST'])
 def play_game():
@@ -24,7 +27,7 @@ def play_game():
 
     game1 = Game(player1, player2)
     result = game1.play_game(player1_choice, player2_choice)  
-
+    print(result)
     return render_template('index.html', result=result)
     
     
